@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Site Estático Seguro</title>
+
+  <!-- Política de Segurança de Conteúdo (CSP) básica -->
+  <!-- Restringe o carregamento de recursos ao próprio domínio ('self'), bloqueia objetos (Flash, etc.) e iframes. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none';">
+
+  <!-- Impede que a página seja aberta dentro de iframes (protege contra ataques de clickjacking) -->
+  <meta http-equiv="X-Frame-Options" content="DENY">
+
+  <!-- Impede o navegador de tentar adivinhar o tipo de arquivo (previne ataques via mime-type) -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+  <!-- Ativa proteção contra XSS em alguns navegadores (legado) -->
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
+  <!-- Controla o envio de informações de referência (referrer) -->
+  <meta name="referrer" content="no-referrer">
+
+  <!-- Adicione SEO básico, se desejado -->
+  <meta name="description" content="Exemplo de site estático seguro contra ataques comuns.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Importa o CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Site Estático Seguro</h1>
+  <nav>
+    <ul>
+      <li><a href="#secao1">Seção 1</a></li>
+      <li><a href="#secao2">Seção 2</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="secao1">
+    <h2>Seção 1</h2>
+    <p>Bem-vindo à Seção 1. Aqui temos conteúdo fixo, livre de formulários inseguros ou entradas de usuário.</p>
+  </section>
+
+  <section id="secao2">
+    <h2>Seção 2</h2>
+    <p>Bem-vindo à Seção 2. Manter o site puramente estático reduz a superfície de ataque.</p>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Para mais informações, envie um e-mail para <strong>exemplo@dominio.com</strong>.</p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 - Meu Site Estático Seguro</p>
+</footer>
+
+<!-- Importa o JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
