@@ -2,65 +2,60 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Site Estático Seguro</title>
+  <title>HackerSpace</title>
 
-  <!-- Política de Segurança de Conteúdo (CSP) básica -->
-  <!-- Restringe o carregamento de recursos ao próprio domínio ('self'), bloqueia objetos (Flash, etc.) e iframes. -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none';">
-
-  <!-- Impede que a página seja aberta dentro de iframes (protege contra ataques de clickjacking) -->
-  <meta http-equiv="X-Frame-Options" content="DENY">
-
-  <!-- Impede o navegador de tentar adivinhar o tipo de arquivo (previne ataques via mime-type) -->
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-
-  <!-- Ativa proteção contra XSS em alguns navegadores (legado) -->
-  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-
-  <!-- Controla o envio de informações de referência (referrer) -->
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; frame-ancestors 'none';">
   <meta name="referrer" content="no-referrer">
-
-  <!-- Adicione SEO básico, se desejado -->
-  <meta name="description" content="Exemplo de site estático seguro contra ataques comuns.">
+  <meta name="description" content="Secure Hacker-style Static Website">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Importa o CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="matrix-bg"></div>
+
 <header>
-  <h1>Site Estático Seguro</h1>
+  <div class="glitch-container">
+    <h1 class="glitch" data-text="HackerSpace">HackerSpace</h1>
+  </div>
   <nav>
     <ul>
-      <li><a href="#secao1">Seção 1</a></li>
-      <li><a href="#secao2">Seção 2</a></li>
-      <li><a href="#contato">Contato</a></li>
+      <li><a href="#secao1" class="nav-link">> Explorar</a></li>
+      <li><a href="#secao2" class="nav-link">> Sistemas</a></li>
+      <li><a href="#contato" class="nav-link">> Terminal</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
-  <section id="secao1">
-    <h2>Seção 1</h2>
-    <p>Bem-vindo à Seção 1. Aqui temos conteúdo fixo, livre de formulários inseguros ou entradas de usuário.</p>
+  <section id="secao1" class="terminal-section">
+    <h2>> Explorar</h2>
+    <div class="terminal-text">
+      <p class="typing">Iniciando sequência de exploração...</p>
+      <p>Bem-vindo ao sistema. Acesso garantido para usuários autorizados.</p>
+    </div>
   </section>
 
-  <section id="secao2">
-    <h2>Seção 2</h2>
-    <p>Bem-vindo à Seção 2. Manter o site puramente estático reduz a superfície de ataque.</p>
+  <section id="secao2" class="terminal-section">
+    <h2>> Sistemas</h2>
+    <div class="terminal-text">
+      <p>Status: <span class="status-online">ONLINE</span></p>
+      <p>Segurança: <span class="status-secure">MÁXIMA</span></p>
+      <p>Protocolo: <span class="protocol">0xA7F9D2E4</span></p>
+    </div>
   </section>
 
-  <section id="contato">
-    <h2>Contato</h2>
-    <p>Para mais informações, envie um e-mail para <strong>exemplo@dominio.com</strong>.</p>
+  <section id="contato" class="terminal-section">
+    <h2>> Terminal</h2>
+    <div class="terminal-window">
+      <p class="terminal-prompt">root@hackerspace:~$ <span class="cursor">_</span></p>
+      <p>Contato: <span class="highlight">secure@hackerspace.com</span></p>
+    </div>
   </section>
 </main>
 
 <footer>
-  <p>&copy; 2025 - Meu Site Estático Seguro</p>
+  <p class="terminal-text">[SYSTEM] © 2025 - HackerSpace | Todos os direitos reservados</p>
 </footer>
-
-<!-- Importa o JavaScript -->
-<script src="js/script.js"></script>
 </body>
 </html>
